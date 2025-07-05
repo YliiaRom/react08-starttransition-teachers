@@ -10,8 +10,8 @@ export default {
         detail: ":id/detail",
       },
       meeting: "meeting",
-      aboutApp: "about-app",
-      aboutDev: "about-dev",
+      aboutApp: "simple/about-app",
+      aboutDev: "simple/about-dev",
     },
   },
   navigate: {
@@ -21,12 +21,12 @@ export default {
       teachers: {
         index: "/teachers-every/teachers",
         add: "/teachers-every/teachers/new",
-        edit: (id) => `/teachers-every/teachers/new/${id}/edit`,
-        detail: (id) => `/teachers-every/teachers/new/${id}/detail`,
+        edit: (id) => `/teachers-every/teachers/${id}/edit`,
+        detail: (id) => `/teachers-every/teachers/${id}/detail`,
       },
       meeting: "/teachers-every/meeting",
-      aboutApp: "/teachers-every/about-app",
-      aboutDev: "/teachers-every/about-dev",
+      aboutApp: "/teachers-every/simple/about-app",
+      aboutDev: "/teachers-every/simple/about-dev",
     },
   },
 };

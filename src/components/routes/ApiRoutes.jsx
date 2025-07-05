@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import frontRoutes from "./frontRoutes.js";
 import Practice from "../../pages/Practice.jsx";
 import Page404 from "../../pages/Page404.jsx";
-import MainLayout from "../Layouts/MainLayout.jsx";
+
 import TeachersMain from "../../pages/TeachersPages/TeacherMain.jsx";
 import MainTeachersLayout from "../Layouts/MainTeachersLayout.jsx";
 import Teachers from "../../pages/TeachersPages/Teachers.jsx";
@@ -13,6 +13,7 @@ import SimpleTeachersLayout from "../Layouts/SimpleTechersLayout.jsx";
 import AddTeacher from "../../pages/TeachersPages/AddTeacher.jsx";
 import EditTeacher from "../../pages/TeachersPages/EditTeacher.jsx";
 import Detail from "../../pages/TeachersPages/Detail.jsx";
+import MainLayout from "../Layouts/MainLayout.jsx";
 
 function ApiRoutes() {
   return (
@@ -55,7 +56,7 @@ function ApiRoutes() {
         </Route>
         {/* ===========simple layout */}
         <Route
-          path={frontRoutes.pages.teachersMain.index}
+          path={`${frontRoutes.pages.teachersMain.index}/simple`}
           element={<SimpleTeachersLayout />}
         >
           <Route
