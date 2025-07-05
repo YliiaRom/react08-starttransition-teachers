@@ -9,7 +9,7 @@ import Teachers from "../../pages/TeachersPages/Teachers.jsx";
 import Meeting from "../../pages/TeachersPages/Meeting.jsx";
 import AboutApp from "../../pages/TeachersPages/AboutApp.jsx";
 import AboutDev from "../../pages/TeachersPages/AboutDev.jsx";
-import SimpleTeachersLayout from "../Layouts/SimpleTechersLayout.jsx";
+import SimpleTeachersLayout from "../Layouts/SimpleTeachersLayout.jsx";
 import AddTeacher from "../../pages/TeachersPages/AddTeacher.jsx";
 import EditTeacher from "../../pages/TeachersPages/EditTeacher.jsx";
 import Detail from "../../pages/TeachersPages/Detail.jsx";
