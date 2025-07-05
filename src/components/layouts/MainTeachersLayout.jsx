@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import GoPracticeButton from "../GoPracticeButton";
 import HeaderTeachers from "./components/HeaderTeachers";
-import FooterTeachers from "../../components/layouts/components/FooterTeachers";
+import FooterTeachers from "./components/FooterTeachers";
 
 function MainTeachersLayout() {
   return (

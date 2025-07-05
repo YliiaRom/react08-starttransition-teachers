@@ -13,8 +13,8 @@ import SimpleTeachersLayout from "../Layouts/SimpleTechersLayout.jsx";
 import AddTeacher from "../../pages/TeachersPages/AddTeacher.jsx";
 import EditTeacher from "../../pages/TeachersPages/EditTeacher.jsx";
 import Detail from "../../pages/TeachersPages/Detail.jsx";
-import MainLayout from "../../components/layouts/MainLayout.jsx";
-import MainTeachersLayout from "../../components/layouts/MainTeachersLayout.jsx";
+import MainLayout from "../Layouts/MainLayout.jsx";
+import MainTeachersLayout from "../Layouts/MainTeachersLayout.jsx";
 
 function ApiRoutes() {
   return (
