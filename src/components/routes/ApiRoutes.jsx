@@ -4,7 +4,7 @@ import Practice from "../../pages/Practice.jsx";
 import Page404 from "../../pages/Page404.jsx";
 
 import TeachersMain from "../../pages/TeachersPages/TeacherMain.jsx";
-import MainTeachersLayout from "../Layouts/MainTeachersLayout.jsx";
+
 import Teachers from "../../pages/TeachersPages/Teachers.jsx";
 import Meeting from "../../pages/TeachersPages/Meeting.jsx";
 import AboutApp from "../../pages/TeachersPages/AboutApp.jsx";
@@ -13,7 +13,8 @@ import SimpleTeachersLayout from "../Layouts/SimpleTechersLayout.jsx";
 import AddTeacher from "../../pages/TeachersPages/AddTeacher.jsx";
 import EditTeacher from "../../pages/TeachersPages/EditTeacher.jsx";
 import Detail from "../../pages/TeachersPages/Detail.jsx";
-import MainLayout from "../Layouts/MainLayout.jsx";
+import MainLayout from "../../components/layouts/MainLayout.jsx";
+import MainTeachersLayout from "../../components/layouts/MainTeachersLayout.jsx";
 
 function ApiRoutes() {
   return (
