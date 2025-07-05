@@ -1,36 +1,34 @@
 import { NavLink } from "react-router";
+import frontRouts from "../../routes/frontRoutes.js";
 
-function Navbar() {
+function HeaderTeachers() {
   return (
-    <div className={`navBar`}>
-      <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
-        Головна
+    <div className="headerTeachers">
+      <NavLink
+        className={({ isActive }) => (isActive ? "active" : "")}
+        to={frontRouts.navigate.teachersMain.teachers.index}
+      >
+        Вчителі
       </NavLink>
       <NavLink
-        to="/products"
+        to={frontRouts.navigate.teachersMain.meeting}
         className={({ isActive }) => (isActive ? "active" : "")}
       >
-        Магазин
+        Збори
       </NavLink>
       <NavLink
-        to="/products-api"
+        to={frontRouts.navigate.teachersMain.aboutApp}
         className={({ isActive }) => (isActive ? "active" : "")}
       >
-        Магазин + fakestoreapi
+        Про Додаток
       </NavLink>
       <NavLink
-        to="/payment"
+        to={frontRouts.navigate.teachersMain.aboutDev}
         className={({ isActive }) => (isActive ? "active" : "")}
       >
-        Правила оплати
-      </NavLink>
-      <NavLink
-        to="/contacts"
-        className={({ isActive }) => (isActive ? "active" : "")}
-      >
-        Контакти
+        Про Розробника
       </NavLink>
     </div>
   );
 }
-export default Navbar;
+export default HeaderTeachers;

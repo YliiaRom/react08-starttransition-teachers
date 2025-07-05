@@ -1,0 +1,62 @@
+.messageBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+  width: 100%;
+  padding: 30px 10px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #999, #fff, #999);
+
+  /* backdrop-filter: blur(17px); */
+  box-shadow: -1px -1px 2px #fff, 2px 2px 4px rgb(57, 32, 1),
+    0px 5px 10px #bcb3a0;
+}
+.messageBox * {
+  height: fit-content;
+  position: relative;
+  padding: 7px;
+  border-radius: 7px;
+  word-wrap: break-word;
+  color: #000;
+}
+.messageBox :nth-child(odd) {
+  min-width: 50%;
+  max-width: 80%;
+  align-self: flex-end;
+  border: 5px groove #fffff6;
+  background-color: #f8eacb;
+  box-shadow: 0 1px 3px #474646;
+  border: 1px solid #999;
+}
+.messageBox :nth-child(odd)::before {
+  content: "📩";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  right: -10px;
+  bottom: -10px;
+  background-color: rgb(246, 249, 249);
+  border: 2px solid #999;
+}
+.messageBox :nth-child(even) {
+  width: 50%;
+  align-self: flex-start;
+  border: 1px solid #2a2929;
+  box-shadow: 0 1px 3px #474646;
+  background-color: #daf8cb;
+  background-color: #f8e3cb;
+}
+.messageBox :nth-child(even)::before {
+  content: "📩";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: -10px;
+  bottom: -10px;
+  background-color: rgb(246, 249, 249);
+  border: 2px solid #999;
+}

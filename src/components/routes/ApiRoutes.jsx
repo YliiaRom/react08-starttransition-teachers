@@ -1,32 +1,76 @@
 import { Route, Routes } from "react-router";
 import frontRoutes from "./frontRoutes.js";
-import Home from "../../pages/Home";
-import Contacts from "../../pages/Contacts.jsx";
-import Shop from "../../pages/Shop.jsx";
-import Payment from "../../pages/Payment.jsx";
-import Layout from "../Layout.jsx";
-import Detail from "../../pages/Detail.jsx";
-import ShopByApi from "../../pages/ShopByApi.jsx";
+import Practice from "../../pages/Practice.jsx";
+import Page404 from "../../pages/Page404.jsx";
+import MainLayout from "../Layouts/MainLayout.jsx";
+import TeachersMain from "../../pages/TeachersPages/TeacherMain.jsx";
+import MainTeachersLayout from "../Layouts/MainTeachersLayout.jsx";
+import Teachers from "../../pages/TeachersPages/Teachers.jsx";
+import Meeting from "../../pages/TeachersPages/Meeting.jsx";
+import AboutApp from "../../pages/TeachersPages/AboutApp.jsx";
+import AboutDev from "../../pages/TeachersPages/AboutDev.jsx";
+import SimpleTeachersLayout from "../Layouts/SimpleTechersLayout.jsx";
+import AddTeacher from "../../pages/TeachersPages/AddTeacher.jsx";
+import EditTeacher from "../../pages/TeachersPages/EditTeacher.jsx";
+import Detail from "../../pages/TeachersPages/Detail.jsx";
+
 function ApiRoutes() {
   return (
-    <div className="sectionWrap">
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path={frontRoutes.pages.products.index} element={<Shop />} />
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route path={frontRoutes.pages.practice} element={<Practice />} />
+
+        <Route
+          path={frontRoutes.pages.teachersMain.index}
+          element={<MainTeachersLayout />}
+        >
+          {/* ====main teachers>> */}
           <Route
-            path={frontRoutes.pages.products.api}
-            element={<ShopByApi />}
+            path={frontRoutes.pages.teachersMain.index}
+            element={<TeachersMain />}
+          >
+            {/* ==== teachers>> */}
+            <Route
+              path={frontRoutes.pages.teachersMain.teachers.index}
+              element={<Teachers />}
+            >
+              <Route
+                path={frontRoutes.pages.teachersMain.teachers.add}
+                element={<AddTeacher />}
+              />
+              <Route
+                path={frontRoutes.pages.teachersMain.teachers.edit}
+                element={<EditTeacher />}
+              />
+              <Route
+                path={frontRoutes.pages.teachersMain.teachers.detail}
+                element={<Detail />}
+              />
+            </Route>
+            <Route
+              path={frontRoutes.pages.teachersMain.meeting}
+              element={<Meeting />}
+            />
+          </Route>
+        </Route>
+        {/* ===========simple layout */}
+        <Route
+          path={frontRoutes.pages.teachersMain.index}
+          element={<SimpleTeachersLayout />}
+        >
+          <Route
+            path={frontRoutes.pages.teachersMain.aboutApp}
+            element={<AboutApp />}
           />
-          <Route path={frontRoutes.pages.contacts} element={<Contacts />} />
-          <Route path={frontRoutes.pages.payment} element={<Payment />} />
           <Route
-            path={frontRoutes.pages.products.detail}
-            element={<Detail />}
+            path={frontRoutes.pages.teachersMain.aboutDev}
+            element={<AboutDev />}
           />
         </Route>
-      </Routes>
-    </div>
+
+        <Route path="*" element={<Page404 />} />
+      </Route>
+    </Routes>
   );
 }
 export default ApiRoutes;

@@ -1,23 +1,32 @@
 export default {
   pages: {
-    home: "/",
-    contacts: "/contacts",
-    payment: "/payment",
-    products: {
-      index: "/products",
-      api: "/products-api",
-      add: "/products/new",
-      edit: "/products/:id/edit",
-      detail: "/products/:id",
+    practice: "/",
+    teachersMain: {
+      index: "/teachers-every",
+      teachers: {
+        index: "teachers",
+        add: "new",
+        edit: ":id/edit",
+        detail: ":id/detail",
+      },
+      meeting: "meeting",
+      aboutApp: "about-app",
+      aboutDev: "about-dev",
     },
   },
   navigate: {
-    products: {
-      list: "/products",
-      add: "/products/new",
-      listApi: "/products-api",
-      getDetailLink: (id) => `/products/${id}`,
-      getEditLink: (id) => `/products/${id}/edit`,
+    practice: "/",
+    teachersMain: {
+      index: "/teachers-every",
+      teachers: {
+        index: "/teachers-every/teachers",
+        add: "/teachers-every/teachers/new",
+        edit: (id) => `/teachers-every/teachers/new/${id}/edit`,
+        detail: (id) => `/teachers-every/teachers/new/${id}/detail`,
+      },
+      meeting: "/teachers-every/meeting",
+      aboutApp: "/teachers-every/about-app",
+      aboutDev: "/teachers-every/about-dev",
     },
   },
 };

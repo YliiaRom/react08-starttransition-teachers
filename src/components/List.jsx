@@ -1,12 +1,14 @@
-import { memo } from "react";
+import Item from "./Item";
 
-function List({ list }) {
+function List({ list, onSelect, isSelect }) {
   return (
-    <ul className="textList">
+    <ul className="cardTeacherList">
       {list.map((item, index) => (
-        <li key={index}>{item}</li>
+        <li key={index}>
+          <Item item={item} onSelect={onSelect} isSelect={isSelect} />
+        </li>
       ))}
     </ul>
   );
 }
-export default memo(List);
+export default List;

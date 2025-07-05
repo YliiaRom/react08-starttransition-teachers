@@ -1,7 +1,7 @@
 function Detail() {
   return (
     <div className="sectionWrap">
-      <h2>Detail </h2>
+      <h2>Detail</h2>
     </div>
   );
 }

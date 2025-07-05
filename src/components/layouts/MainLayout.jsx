@@ -1,19 +1,21 @@
 import { Outlet } from "react-router";
-import Navbar from "./NavBar/NavBar";
+import MainNavBar from "../NavBar/MainNavBar";
 
-function Layout() {
+function MainLayout() {
   return (
     <div>
       <header>
-        <Navbar key={1234} />
+        <MainNavBar />
       </header>
+
       <main>
         <Outlet />
+        <hr />
       </main>
       <footer>
-        <Navbar key={12345} />
+        <h2>@2025</h2>
       </footer>
     </div>
   );
 }
-export default Layout;
+export default MainLayout;

@@ -1,23 +1,18 @@
+const API_BASE_URL = `https://bk-teachers08.onrender.com/api`;
+
 export default {
-  productsList: "https://fakestoreapi.in/api/products?limit=10",
-  category: "https://fakestoreapi.in/api/products/category",
-  getByCategoryAndType: (title) =>
-    `https://fakestoreapi.in/api/products/category?type=${title}`,
-  // addProduct: "http://localhost:5000/api/products",
-  // getUpdateProductLink: (id) => `http://localhost:5000/api/products/${id}`,
-  // getProductById: (id) => `http://localhost:5000/api/products/${id}`,
-  // getDeleteProductLink: (id) => `http://localhost:5000/api/products/${id}`,
+  // GET: Отримати всіх вчителів
+  getAllTeachers: `${API_BASE_URL}/teachers`,
+
+  // POST: Створити нового вчителя
+  addTeacher: `${API_BASE_URL}/teachers`,
+
+  // GET: Отримати вчителя за ID
+  getTeacherById: (id) => `${API_BASE_URL}/teachers/${id}`,
+
+  // PUT: Оновити вчителя за ID
+  updateTeacher: (id) => `${API_BASE_URL}/teachers/${id}`,
+
+  // DELETE: Видалити вчителя за ID
+  deleteTeacher: (id) => `${API_BASE_URL}/teachers/${id}`,
 };
-// {
-//   "status": "SUCCESS",
-//   "message": "We have 6 categories to choose from.",
-//   "categories": [
-//     "tv",
-//     "audio",
-//     "laptop",
-//     "mobile",
-//     "gaming",
-//     "appliances"
-//   ]
-// }
-// https://fakestoreapi.in/api/products/category?type=mobile"
