@@ -227,11 +227,15 @@ button {
   margin-bottom: 15px;
 }
 button:hover {
-  background: radial-gradient(circle, #edede9, #43320d);
+  background: radial-gradient(circle, #edede9, #acabaa);
   text-shadow: 0px 1px 1px #060505;
   color: #685b45;
 }
 .more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   font-weight: 900;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -397,4 +401,39 @@ input {
   border-radius: 50%;
   border: 7px solid #afafab;
   box-shadow: 0px 2px 1px#656562, -1px -2px 1px #fff;
+}
+.list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+}
+.list * {
+  padding: 0.5rem 1rem;
+  box-shadow: -2px -2px 3px #fff, 2px 2px 3px #999;
+}
+/*======detail======*/
+.moreNew,
+.moreDetail {
+  box-shadow: none;
+  border-radius: 3px;
+  margin-bottom: 0px;
+  border-color: transparent;
+  font-weight: 900;
+  letter-spacing: 2px;
+  max-width: 100px;
+  text-shadow: 0px 1px 1px #bcb9b9, 0px 0px 15px #fffdfd;
+  padding: 7px 15px;
+  color: rgb(101, 100, 100);
+  /* border: 3px goose #fff;
+  border-width: 0px 3px 3px 0px; */
+  box-shadow: 2px 2px 4px #4d4c4c, -1px -1px 3px #fff;
+  margin: 5px;
+  background: transparent;
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+}
+.moreNew {
+  max-width: 150px;
+  padding: 1rem 2rem;
 }

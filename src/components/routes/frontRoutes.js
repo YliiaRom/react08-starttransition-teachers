@@ -10,8 +10,8 @@ export default {
         detail: ":id/detail",
       },
       meeting: "meeting",
-      aboutApp: "simple/about-app",
-      aboutDev: "simple/about-dev",
+      aboutApp: "about-app",
+      aboutDev: "about-dev",
     },
   },
   navigate: {
@@ -25,8 +25,8 @@ export default {
         detail: (id) => `/teachers-every/teachers/${id}/detail`,
       },
       meeting: "/teachers-every/meeting",
-      aboutApp: "/teachers-every/simple/about-app",
-      aboutDev: "/teachers-every/simple/about-dev",
+      aboutApp: "simple/about-app",
+      aboutDev: "simple/about-dev",
     },
   },
 };

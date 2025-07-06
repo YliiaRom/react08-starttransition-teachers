@@ -1,13 +1,14 @@
 import { startTransition, useState, useTransition } from "react";
 import bgImg from "../assets/img/start-use.jpg";
-import List from "./List";
+import ListPractice from "./ListPractice";
+
 const arrFirst = Array.from(
-  { length: 10000 },
-  (_, index) => `елемент - ${index}`
+  { length: 20000 },
+  (_, index) => `product - ${index}`
 );
 const arrSecond = Array.from(
-  { length: 10000 },
-  (_, index) => `елемент - ${index}`
+  { length: 20000 },
+  (_, index) => `product - ${index}`
 );
 
 function StartAndUseTransition() {
@@ -104,7 +105,8 @@ function StartAndUseTransition() {
         </label>
         <button onClick={() => setIsOpen((v) => !v)}>відкрити список</button>
         {isOpen && firstFilteredList.length > 0 && (
-          <List list={firstFilteredList} />
+          // <ListPractice list={firstFilteredList} />
+          <ListPractice list={firstFilteredList} />
         )}
         <hr />
         <h2> не блокує введення / </h2>
@@ -121,7 +123,7 @@ function StartAndUseTransition() {
         </button>
         {isPending && <p>Завантаження...</p>}
         {isOpenSecond && secondFilteredList.length > 0 && (
-          <List list={secondFilteredList} />
+          <ListPractice list={secondFilteredList} />
         )}
       </div>
     </div>

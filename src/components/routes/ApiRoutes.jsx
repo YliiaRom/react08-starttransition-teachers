@@ -44,17 +44,19 @@ function ApiRoutes() {
                 path={frontRoutes.pages.teachersMain.teachers.edit}
                 element={<EditTeacher />}
               />
-              <Route
-                path={frontRoutes.pages.teachersMain.teachers.detail}
-                element={<Detail />}
-              />
             </Route>
+
             <Route
               path={frontRoutes.pages.teachersMain.meeting}
               element={<Meeting />}
             />
+            <Route
+              path={`${frontRoutes.pages.teachersMain.teachers.index}/:id/detail`}
+              element={<Detail />}
+            />
           </Route>
         </Route>
+
         {/* ===========simple layout */}
         <Route
           path={`${frontRoutes.pages.teachersMain.index}/simple`}

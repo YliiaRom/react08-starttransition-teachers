@@ -4,6 +4,7 @@ import List from "../../components/List.jsx";
 import { useCallback, useEffect, useState } from "react";
 
 import frontRoutes from "../../components/routes/frontRoutes.js";
+import GoAddNewCardButton from "../../components/GoAddNewCardButton.jsx";
 
 function Teachers() {
   const navigate = useNavigate();
@@ -48,10 +49,9 @@ function Teachers() {
   return (
     <div className="sectionWrap">
       <h2>teachers</h2>
+      <GoAddNewCardButton />
       <button onClick={() => goToMeeting()}>Go to meeting</button>
-      {content}
-
-      <Outlet />
+      <Outlet /> {content}
     </div>
   );
 }

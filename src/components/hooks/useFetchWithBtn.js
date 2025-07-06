@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 
 import apiRoutes from "../../api/apiRoutes.js";
+import axios from "axios";
 
 const useFetchWithBtn = () => {
   const [data, setData] = useState(null);
@@ -25,7 +26,15 @@ const useFetchWithBtn = () => {
       setLoader(false);
     }
   }, []);
+  const addTeacher = useCallback(async (newCard) => {
+    try {
+      const res = await axios.post(apiRoutes.addTeacher, newCard);
+      console.log(res.data);
+    } catch (err) {
+      console.log(err.message);
+    }
+  }, []);
 
-  return { data, loader, error, getData };
+  return { data, loader, error, getData, addTeacher };
 };
 export default useFetchWithBtn;

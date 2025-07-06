@@ -11,9 +11,11 @@ function MainTeachersLayout() {
       </div>
 
       <div>
+        <h2>
+          Треба трохи зачекати —і сервер поверне свіжі дані. Воно того варте{" "}
+        </h2>
         <Outlet />
         <hr />
-
         <GoPracticeButton />
       </div>
 

@@ -1,3 +1,5 @@
+import GoDetailTeacherCardButton from "./GoDetailTeacherCardButton";
+
 function Item({ item, onSelect, isSelect }) {
   return (
     <div>
@@ -7,6 +9,7 @@ function Item({ item, onSelect, isSelect }) {
           <div>
             <h3> {item.name}</h3>
             <p>предмет: {item.subject}</p>
+            <GoDetailTeacherCardButton id={item.id} item={item} />
           </div>
         </div>
       </div>
